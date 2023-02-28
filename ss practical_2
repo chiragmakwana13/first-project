@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <conio.h>
+#include <string.h>
+void main()
+{
+	char str[30];
+	int i;
+	int flag=0;
+	printf("Enter Arithmetic Expression:- ");
+	scanf("%s",str);
+	for(i=0;i<strlen(str);i++)
+	{
+		if(i%2==0)
+		{
+			if(str[i]!='a'){ flag=1; break;}
+		}
+		
+		if(i%2==1)
+		{
+			if(str[i]!='+' & str[i]!='-' & str[i]!='*' & str[i]!='/'){ flag=1; break;}
+		}
+		
+	}
+	if(flag==1)
+			printf("\nInvalid Arithmetic Expression.\n");
+		else
+			printf("\nValid Arithmetic Expression.\n");
+}
